@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  frontend:
+    build: ./frontend # Caminho para o diretório onde está o Dockerfile do frontend
+    ports:
+      - "8080:8080" # Mapeamento da porta do container para a porta do host
+    volumes:
+      - ./frontend:/app # Mapeamento do código-fonte do frontend para o container
+    depends_on:
+      - backend # Serviço no qual o frontend depende
