@@ -1,8 +1,9 @@
 FROM node:14-alpine
 
-WORKDIR /app
+WORKDIR /frontend
 
-COPY package*.json ./
+COPY J:/devlinks/backend/frontend/package.json .
+
 RUN npm install
 
 COPY . .
